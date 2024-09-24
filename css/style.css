@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+}
+
+header {
+    background-image: url("../images/bg-desktop-dark.jpg");
+    background-size: 100% 220px;
+    background-repeat: no-repeat;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    display: none;
+}
+
+.checked {
+    background-image: linear-gradient(hsl(192, 100%, 67%) ,hsl(280, 87%, 65%));
+}
+
+.show {
+    display: block;
+}
+
+li , .details {
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+input::placeholder {
+    color: white !important; 
+    opacity: 1; /* Firefox */
+}
+
+span {
+    opacity: 25%;
+}
+
+.hvr {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+

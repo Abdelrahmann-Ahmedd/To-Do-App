@@ -1,36 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Todo app</title>
+  </head>
+  <body>
+    <header
+      class="container-fluid bg-black d-flex justify-content-center align-items-sm-start pt-5"
+    >
+      <div
+        class="main bg-transparent w-50 d-flex flex-column justify-content-between"
+      >
+        <nav
+          class="text-white mb-4 d-flex justify-content-between align-items-center w-100"
+        >
+          <h1>T O D O</h1>
+          <img
+            onclick="changeTheme()"
+            src="/images/icon-moon.svg"
+            alt="moon icon"
+          />
+        </nav>
+        <div class="content bg-transparent w-100">
+          <div class="get p-3 mb-5 bg-dark d-flex align-items-center rounded-2">
+            <button onclick="addTask()" class="btn btn-primary">Add</button>
+            <input
+              id="getTask"
+              class="form-control w-100 ms-3 bg-dark text-white border-0"
+              type="text"
+              placeholder="Create a new todo..."
+            />
+          </div>
+          <div class="show bg-dark mt-5 w-100 rounded-1">
+            <ul class="list-unstyled d-flex flex-column">
+              <div id="listOfTasks" class="row g-1"></div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="details fs-6">
+                    <span>0 items left</span>
+                    <div class="links">
+                      <button
+                        onclick="displayAllTasks()"
+                        class="btn btn-dark btn-sm hvr"
+                      >
+                        All
+                      </button>
+                      <button
+                        onclick="displayWithStatus('active')"
+                        class="btn btn-sm btn-dark"
+                      >
+                        Active
+                      </button>
+                      <button
+                        onclick="displayWithStatus('completed')"
+                        class="btn btn-sm btn-dark"
+                      >
+                        Completed
+                      </button>
+                    </div>
+                    <span class="clr" onclick="clearCompleted()"
+                      >Clear Completed</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
