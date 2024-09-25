@@ -156,6 +156,7 @@ function clearCompleted() {
         
     }
     localStorage.setItem("tasks",JSON.stringify(allTasks));
+    showItemSize();
     displayAllTasks();
 }
 
@@ -164,4 +165,20 @@ function showItemSize() {
     itemLen.innerHTML = `${len} items left`
 }
 
-
+function changeTheme() {
+    var icon = document.querySelector("nav i");
+    var body = document.querySelector("body");
+    var get = document.querySelector(".get");
+    var show = document.querySelector(".show");
+    var header = document.querySelector("header");
+    icon.classList.toggle("fa-moon");
+    icon.classList.add("fa-sun");
+    // get.classList.toggle("bg-dark");
+    // get.classList.toggle("bg-white");
+    // show.classList.toggle("bg-dark");
+    // show.classList.toggle("bg-white");
+    body.classList.toggle("bg-dark");
+    body.classList.toggle("bg-white");
+    header.classList.toggle("bg-dark");
+    header.classList.toggle("bg-white");
+}
